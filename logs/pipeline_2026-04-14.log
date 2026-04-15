@@ -1,0 +1,40 @@
+2026-04-14 20:13:43 | INFO | __main__:run_once:29 — ============================================================
+2026-04-14 20:13:43 | INFO | __main__:run_once:30 — Pipeline run started — ID: 20260414_201343
+2026-04-14 20:13:43 | INFO | __main__:run_once:31 — ============================================================
+2026-04-14 20:13:43 | INFO | src.extract.extractor:extract_all:69 — Starting EXTRACT stage for 5 cities
+2026-04-14 20:13:43 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Casablanca (lat=33.5731, lon=-7.5898)
+2026-04-14 20:13:43 | ERROR | src.extract.extractor:fetch_city_weather:53 — Request failed for Casablanca: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=33.5731&longitude=-7.5898&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation%2Cweathercode&forecast_days=1&timezone=auto (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-14 20:13:43 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Paris (lat=48.8566, lon=2.3522)
+2026-04-14 20:13:43 | ERROR | src.extract.extractor:fetch_city_weather:53 — Request failed for Paris: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=48.8566&longitude=2.3522&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation%2Cweathercode&forecast_days=1&timezone=auto (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-14 20:13:43 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for London (lat=51.5074, lon=-0.1278)
+2026-04-14 20:13:43 | ERROR | src.extract.extractor:fetch_city_weather:53 — Request failed for London: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=51.5074&longitude=-0.1278&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation%2Cweathercode&forecast_days=1&timezone=auto (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-14 20:13:43 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for New York (lat=40.7128, lon=-74.006)
+2026-04-14 20:13:43 | ERROR | src.extract.extractor:fetch_city_weather:53 — Request failed for New York: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=40.7128&longitude=-74.006&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation%2Cweathercode&forecast_days=1&timezone=auto (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-14 20:13:43 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Tokyo (lat=35.6762, lon=139.6503)
+2026-04-14 20:13:43 | ERROR | src.extract.extractor:fetch_city_weather:53 — Request failed for Tokyo: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=35.6762&longitude=139.6503&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation%2Cweathercode&forecast_days=1&timezone=auto (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-14 20:13:43 | INFO | src.extract.extractor:extract_all:82 — EXTRACT complete: 0/5 cities fetched
+2026-04-14 20:13:43 | ERROR | __main__:run_once:37 — Extract returned no data — aborting pipeline run
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [Casablanca] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-14 20:13:51 | WARNING | src.transform.transformer:transform_payload:65 — [X] Missing hourly data — skipping
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-14 20:13:51 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 3 payloads
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [Paris] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [London] Transformed → 24 clean rows
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [Tokyo] Transformed → 24 clean rows
+2026-04-14 20:13:51 | INFO | src.transform.transformer:transform_all:147 — TRANSFORM complete: 72 total rows across 3 cities
+2026-04-14 20:13:51 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 0 payloads
+2026-04-14 20:13:51 | ERROR | src.transform.transformer:transform_all:143 — TRANSFORM produced no data — aborting
+2026-04-14 20:13:51 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 2 payloads
+2026-04-14 20:13:51 | WARNING | src.transform.transformer:transform_payload:65 — [Unknown] Missing hourly data — skipping
+2026-04-14 20:13:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [Casablanca] Transformed → 24 clean rows
+2026-04-14 20:13:51 | INFO | src.transform.transformer:transform_all:147 — TRANSFORM complete: 24 total rows across 1 cities
+2026-04-14 20:13:51 | INFO | src.utils.validator:validate:95 — Validation ✅ PASSED
+2026-04-14 20:13:51 | INFO | src.utils.validator:validate:95 — Validation ❌ FAILED
+  ERROR: Column 'temperature_c' has 1 null values
+2026-04-14 20:13:51 | INFO | src.utils.validator:validate:95 — Validation ✅ PASSED
+  WARN:  Column 'humidity_pct': 1 rows outside expected range [0, 100]

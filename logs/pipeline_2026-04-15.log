@@ -1,0 +1,95 @@
+2026-04-15 19:57:40 | INFO | __main__:run_once:29 — ============================================================
+2026-04-15 19:57:40 | INFO | __main__:run_once:30 — Pipeline run started — ID: 20260415_195740
+2026-04-15 19:57:40 | INFO | __main__:run_once:31 — ============================================================
+2026-04-15 19:57:40 | INFO | src.extract.extractor:extract_all:69 — Starting EXTRACT stage for 5 cities
+2026-04-15 19:57:40 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Casablanca (lat=33.5731, lon=-7.5898)
+2026-04-15 19:57:42 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for Casablanca
+2026-04-15 19:57:42 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\casablanca_20260415_1957.json
+2026-04-15 19:57:42 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Paris (lat=48.8566, lon=2.3522)
+2026-04-15 19:57:44 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for Paris
+2026-04-15 19:57:44 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\paris_20260415_1957.json
+2026-04-15 19:57:44 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for London (lat=51.5074, lon=-0.1278)
+2026-04-15 19:57:46 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for London
+2026-04-15 19:57:46 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\london_20260415_1957.json
+2026-04-15 19:57:46 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for New York (lat=40.7128, lon=-74.006)
+2026-04-15 19:57:48 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for New York
+2026-04-15 19:57:48 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\new_york_20260415_1957.json
+2026-04-15 19:57:48 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Tokyo (lat=35.6762, lon=139.6503)
+2026-04-15 19:57:50 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for Tokyo
+2026-04-15 19:57:50 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\tokyo_20260415_1957.json
+2026-04-15 19:57:50 | INFO | src.extract.extractor:extract_all:82 — EXTRACT complete: 5/5 cities fetched
+2026-04-15 19:57:50 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 5 payloads
+2026-04-15 19:57:50 | SUCCESS | src.transform.transformer:transform_payload:121 — [Casablanca] Transformed → 24 clean rows
+2026-04-15 19:57:50 | SUCCESS | src.transform.transformer:transform_payload:121 — [Paris] Transformed → 24 clean rows
+2026-04-15 19:57:50 | SUCCESS | src.transform.transformer:transform_payload:121 — [London] Transformed → 24 clean rows
+2026-04-15 19:57:50 | SUCCESS | src.transform.transformer:transform_payload:121 — [New York] Transformed → 24 clean rows
+2026-04-15 19:57:51 | SUCCESS | src.transform.transformer:transform_payload:121 — [Tokyo] Transformed → 24 clean rows
+2026-04-15 19:57:51 | INFO | src.transform.transformer:transform_all:147 — TRANSFORM complete: 120 total rows across 5 cities
+2026-04-15 19:57:51 | INFO | src.utils.validator:validate:95 — Validation ✅ PASSED
+2026-04-15 19:57:51 | INFO | src.load.loader:load_all:84 — Starting LOAD stage: 120 rows to persist
+2026-04-15 19:57:51 | SUCCESS | src.load.loader:load_to_sqlite:62 — Inserted 120 new rows into 'weather_hourly' table
+2026-04-15 19:57:51 | SUCCESS | src.load.loader:load_to_parquet:76 — Saved Parquet → data\processed\weather_20260415_195751.parquet (12.6 KB)
+2026-04-15 19:57:51 | INFO | src.load.loader:load_all:100 — LOAD complete: {'inserted_rows': 120, 'parquet_path': 'data\\processed\\weather_20260415_195751.parquet', 'total_rows_processed': 120, 'cities': ['Casablanca', 'Paris', 'London', 'New York', 'Tokyo']}
+2026-04-15 19:57:51 | INFO | __main__:run_once:63 — ============================================================
+2026-04-15 19:57:51 | INFO | __main__:run_once:64 — Pipeline run COMPLETE in 11.01s — {'run_id': '20260415_195740', 'status': 'SUCCESS', 'duration_seconds': 11.01, 'inserted_rows': 120, 'parquet_path': 'data\\processed\\weather_20260415_195751.parquet', 'total_rows_processed': 120, 'cities': ['Casablanca', 'Paris', 'London', 'New York', 'Tokyo']}
+2026-04-15 19:57:51 | INFO | __main__:run_once:65 — ============================================================
+2026-04-15 19:58:23 | INFO | __main__:run_scheduled:72 — Scheduler started — pipeline will run every 60 minutes
+2026-04-15 19:58:23 | INFO | __main__:run_once:29 — ============================================================
+2026-04-15 19:58:23 | INFO | __main__:run_once:30 — Pipeline run started — ID: 20260415_195823
+2026-04-15 19:58:23 | INFO | __main__:run_once:31 — ============================================================
+2026-04-15 19:58:23 | INFO | src.extract.extractor:extract_all:69 — Starting EXTRACT stage for 5 cities
+2026-04-15 19:58:23 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Casablanca (lat=33.5731, lon=-7.5898)
+2026-04-15 19:58:24 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for Casablanca
+2026-04-15 19:58:24 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\casablanca_20260415_1958.json
+2026-04-15 19:58:24 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Paris (lat=48.8566, lon=2.3522)
+2026-04-15 19:58:25 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for Paris
+2026-04-15 19:58:25 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\paris_20260415_1958.json
+2026-04-15 19:58:25 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for London (lat=51.5074, lon=-0.1278)
+2026-04-15 19:58:26 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for London
+2026-04-15 19:58:26 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\london_20260415_1958.json
+2026-04-15 19:58:26 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for New York (lat=40.7128, lon=-74.006)
+2026-04-15 19:58:27 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for New York
+2026-04-15 19:58:27 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\new_york_20260415_1958.json
+2026-04-15 19:58:27 | INFO | src.extract.extractor:fetch_city_weather:37 — Fetching weather for Tokyo (lat=35.6762, lon=139.6503)
+2026-04-15 19:58:29 | SUCCESS | src.extract.extractor:fetch_city_weather:45 — Successfully fetched 24 hourly records for Tokyo
+2026-04-15 19:58:29 | DEBUG | src.extract.extractor:extract_all:79 — Saved raw data → data\raw\tokyo_20260415_1958.json
+2026-04-15 19:58:29 | INFO | src.extract.extractor:extract_all:82 — EXTRACT complete: 5/5 cities fetched
+2026-04-15 19:58:29 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 5 payloads
+2026-04-15 19:58:29 | SUCCESS | src.transform.transformer:transform_payload:121 — [Casablanca] Transformed → 24 clean rows
+2026-04-15 19:58:29 | SUCCESS | src.transform.transformer:transform_payload:121 — [Paris] Transformed → 24 clean rows
+2026-04-15 19:58:29 | SUCCESS | src.transform.transformer:transform_payload:121 — [London] Transformed → 24 clean rows
+2026-04-15 19:58:29 | SUCCESS | src.transform.transformer:transform_payload:121 — [New York] Transformed → 24 clean rows
+2026-04-15 19:58:29 | SUCCESS | src.transform.transformer:transform_payload:121 — [Tokyo] Transformed → 24 clean rows
+2026-04-15 19:58:29 | INFO | src.transform.transformer:transform_all:147 — TRANSFORM complete: 120 total rows across 5 cities
+2026-04-15 19:58:29 | INFO | src.utils.validator:validate:95 — Validation ✅ PASSED
+2026-04-15 19:58:29 | INFO | src.load.loader:load_all:84 — Starting LOAD stage: 120 rows to persist
+2026-04-15 19:58:29 | INFO | src.load.loader:load_to_sqlite:50 — No new rows to insert — warehouse already up to date
+2026-04-15 19:58:30 | SUCCESS | src.load.loader:load_to_parquet:76 — Saved Parquet → data\processed\weather_20260415_195830.parquet (12.6 KB)
+2026-04-15 19:58:30 | INFO | src.load.loader:load_all:100 — LOAD complete: {'inserted_rows': 0, 'parquet_path': 'data\\processed\\weather_20260415_195830.parquet', 'total_rows_processed': 120, 'cities': ['Casablanca', 'Paris', 'London', 'New York', 'Tokyo']}
+2026-04-15 19:58:30 | INFO | __main__:run_once:63 — ============================================================
+2026-04-15 19:58:30 | INFO | __main__:run_once:64 — Pipeline run COMPLETE in 6.47s — {'run_id': '20260415_195823', 'status': 'SUCCESS', 'duration_seconds': 6.47, 'inserted_rows': 0, 'parquet_path': 'data\\processed\\weather_20260415_195830.parquet', 'total_rows_processed': 120, 'cities': ['Casablanca', 'Paris', 'London', 'New York', 'Tokyo']}
+2026-04-15 19:58:30 | INFO | __main__:run_once:65 — ============================================================
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [Casablanca] Transformed → 24 clean rows
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-15 20:00:18 | WARNING | src.transform.transformer:transform_payload:65 — [X] Missing hourly data — skipping
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [TestCity] Transformed → 24 clean rows
+2026-04-15 20:00:18 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 3 payloads
+2026-04-15 20:00:18 | SUCCESS | src.transform.transformer:transform_payload:121 — [Paris] Transformed → 24 clean rows
+2026-04-15 20:00:19 | SUCCESS | src.transform.transformer:transform_payload:121 — [London] Transformed → 24 clean rows
+2026-04-15 20:00:19 | SUCCESS | src.transform.transformer:transform_payload:121 — [Tokyo] Transformed → 24 clean rows
+2026-04-15 20:00:19 | INFO | src.transform.transformer:transform_all:147 — TRANSFORM complete: 72 total rows across 3 cities
+2026-04-15 20:00:19 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 0 payloads
+2026-04-15 20:00:19 | ERROR | src.transform.transformer:transform_all:143 — TRANSFORM produced no data — aborting
+2026-04-15 20:00:19 | INFO | src.transform.transformer:transform_all:134 — Starting TRANSFORM stage for 2 payloads
+2026-04-15 20:00:19 | WARNING | src.transform.transformer:transform_payload:65 — [Unknown] Missing hourly data — skipping
+2026-04-15 20:00:19 | SUCCESS | src.transform.transformer:transform_payload:121 — [Casablanca] Transformed → 24 clean rows
+2026-04-15 20:00:19 | INFO | src.transform.transformer:transform_all:147 — TRANSFORM complete: 24 total rows across 1 cities
+2026-04-15 20:00:19 | INFO | src.utils.validator:validate:95 — Validation ✅ PASSED
+2026-04-15 20:00:19 | INFO | src.utils.validator:validate:95 — Validation ❌ FAILED
+  ERROR: Column 'temperature_c' has 1 null values
+2026-04-15 20:00:19 | INFO | src.utils.validator:validate:95 — Validation ✅ PASSED
+  WARN:  Column 'humidity_pct': 1 rows outside expected range [0, 100]
