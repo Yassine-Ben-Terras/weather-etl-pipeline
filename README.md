@@ -234,7 +234,7 @@ duckdb.query("""
 
 ---
 
-## 📋 Key Concepts Demonstrated
+## Key Concepts Demonstrated
 
 - **ETL pattern** — Clear separation of Extract, Transform, Load stages
 - **Data quality gates** — Pipeline aborts before loading if validation fails
@@ -246,7 +246,7 @@ duckdb.query("""
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---|---|
