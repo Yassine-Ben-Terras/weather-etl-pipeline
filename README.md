@@ -1,4 +1,4 @@
-# 🌦️ Weather Data Engineering Pipeline
+# Weather Data Engineering Pipeline
 
 A production-grade **ETL pipeline** that ingests real-time weather data from the [Open-Meteo API](https://open-meteo.com/) for multiple cities, transforms and enriches it, validates data quality, then persists it to both a SQLite warehouse and Parquet files.
 
@@ -8,7 +8,7 @@ A production-grade **ETL pipeline** that ingests real-time weather data from the
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
