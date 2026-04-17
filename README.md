@@ -147,7 +147,7 @@ python pipeline.py --schedule
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 pytest tests/ -v
@@ -161,7 +161,7 @@ Tests cover: wind categorization, temperature bucketing, DataFrame schema valida
 
 ---
 
-## 📊 Querying the Warehouse
+## Querying the Warehouse
 
 After at least one pipeline run, query the SQLite database directly:
 
@@ -200,7 +200,7 @@ duckdb.query("""
 
 ---
 
-## 🔄 Data Dictionary
+## Data Dictionary
 
 | Column | Type | Description |
 |---|---|---|
@@ -221,7 +221,7 @@ duckdb.query("""
 
 ---
 
-## 🧩 Extending the Pipeline
+## Extending the Pipeline
 
 | What to do | Where to look |
 |---|---|
