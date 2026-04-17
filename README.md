@@ -75,7 +75,7 @@ weather_pipeline/
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### 1. Clone and create virtual environment
 
@@ -117,7 +117,7 @@ LOG_LEVEL=INFO
 
 ---
 
-## 🚀 Running the Pipeline
+## Running the Pipeline
 
 ### Single run
 
